@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cristiano Almeida | CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700;1,800&family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #fff;
+        color: #1a1a1a;
+        font-family: 'Karla', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        -webkit-print-color-adjust: exact;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    @media print {
+        body { background: white; }
+    }
+
+    /* Layout */
+    .cv-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+
+    /* Header */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 48px;
+    }
+
+    .name-brand {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
+
+    .contact-info {
+        text-align: right;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.8rem;
+        font-weight: 700;
+        line-height: 1.8;
+        letter-spacing: -0.02em;
+    }
+
+    /* Sections */
+    .section-title {
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        color: #777;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        margin-top: 2.5rem;
+    }
+    .section-title.no-top {
+        margin-top: 0;
+    }
+
+    .content-text {
+        font-size: 0.875rem;
+        line-height: 1.55;
+        color: #333;
+        font-weight: 400;
+    }
+
+    /* About */
+    .about-section {
+        margin-bottom: 32px;
+    }
+
+    /* Skills */
+    .skills-block {
+        margin-bottom: 48px;
+    }
+    .skills-block section + section {
+        margin-top: 24px;
+    }
+    .skills-list p {
+        margin-bottom: 6px;
+    }
+    .skills-list strong {
+        font-weight: 700;
+    }
+
+    /* Two-column layout */
+    .main-grid {
+        display: flex;
+        gap: 48px;
+    }
+    .col-left {
+        flex: 2;
+    }
+    .col-right {
+        flex: 1;
+    }
+
+    /* Jobs */
+    .job-entry {
+        margin-bottom: 40px;
+    }
+    .job-entry:last-child {
+        margin-bottom: 0;
+    }
+    .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+    }
+    .job-title {
+        font-weight: 700;
+        font-style: italic;
+        font-size: 0.95rem;
+    }
+    .date-range {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.8rem;
+        color: #888;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .job-summary {
+        margin-top: 8px;
+        font-weight: 500;
+    }
+    .job-details {
+        list-style: none;
+        margin-top: 12px;
+    }
+    .job-details li {
+        margin-bottom: 4px;
+    }
+    .job-details li::before {
+        content: "– ";
+    }
+    .job-tech {
+        margin-top: 8px;
+        font-size: 0.8rem;
+        font-style: italic;
+    }
+    .job-tech strong {
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    /* Education */
+    .edu-entry {
+        margin-bottom: 24px;
+    }
+    .edu-entry:last-child {
+        margin-bottom: 0;
+    }
+    .edu-heading {
+        font-weight: 700;
+        font-style: italic;
+        font-size: 0.95rem;
+    }
+    .edu-modules {
+        margin-top: 8px;
+        font-size: 0.8rem;
+    }
+
+    /* Projects */
+    .project-entry {
+        margin-bottom: 24px;
+    }
+    .project-entry:last-child {
+        margin-bottom: 0;
+    }
+    .project-name {
+        font-weight: 700;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+    }
+    .project-desc {
+        margin-top: 4px;
+    }
+
+    /* Interests */
+    .interests-list {
+        list-style: none;
+    }
+    .interests-list li {
+        margin-bottom: 12px;
+    }
+    .interests-list li::before {
+        content: "• ";
+    }
+
+    /* Right column: Resources */
+    .resources-label {
+        font-weight: 700;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: #aaa;
+        margin-bottom: 4px;
+    }
+    .resources-list {
+        list-style: none;
+        font-size: 0.7rem;
+        font-weight: 700;
+        word-break: break-all;
+    }
+    .resources-list li {
+        margin-bottom: 6px;
+    }
+    .resources-list .label {
+        color: #aaa;
+    }
+    .resources-group {
+        margin-bottom: 28px;
+    }
+
+    /* Footer */
+    .cv-footer {
+        margin-top: 48px;
+    }
+    .cv-footer p {
+        font-weight: 700;
+        font-size: 0.85rem;
+        font-style: italic;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+        .cv-container {
+            padding: 32px 20px;
+        }
+        .header {
+            flex-direction: column;
+            gap: 16px;
+        }
+        .contact-info {
+            text-align: left;
+        }
+        .main-grid {
+            flex-direction: column;
+        }
+        .job-header {
+            flex-direction: column;
+            gap: 2px;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="cv-container">
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1 class="name-brand">_cristiano<br>almeida</h1>
+        </div>
+        <div class="contact-info">
+            <p><a href="/cdn-cgi/l/email-protection#d0b3a3feb1bcbdb5b9b4b190a0bdfebdb5"><span class="__cf_email__" data-cfemail="0d6e7e236c61606864696c4d7d60236068">[email&#160;protected]</span></a></p>
+            <p><a href="tel:07707249357">07707249357</a></p>
+            <p><a href="https://csalmeida.com">csalmeida.com</a></p>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section class="about-section">
+        <h2 class="section-title no-top">About Me</h2>
+        <p class="content-text">
+            Full-stack developer and founder of Ongandu Limited with over 10 years in the industry. I design and build robust web and mobile applications, manage cloud infrastructure, and deliver end-to-end software solutions for clients across multiple sectors.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <div class="skills-block">
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="content-text skills-list">
+                <p><strong>Languages:</strong> PHP, Ruby, JavaScript, TypeScript, C#, SQL. Exploring Zig, Rust and C.</p>
+                <p><strong>Frameworks:</strong> Laravel, Ruby on Rails, React, React Native, Next.js, WordPress.</p>
+                <p><strong>Data:</strong> PostgreSQL, MySQL, GraphQL.</p>
+                <p><strong>Infrastructure:</strong> Docker, Linux (Ubuntu), cloud servers, VPN configuration, CI/CD.</p>
+                <p><strong>Tools:</strong> Git, Bash scripting, CLI development.</p>
+            </div>
+        </section>
+        <section>
+            <h2 class="section-title">Creative Skills</h2>
+            <p class="content-text">
+                Figma, Affinity Suite, Adobe Illustrator, Photoshop, After Effects, Premiere. Prototyping, UI design, critical thinking.
+            </p>
+        </section>
+    </div>
+
+    <!-- Two-column: Experience + Resources -->
+    <div class="main-grid">
+
+        <!-- Left Column -->
+        <div class="col-left">
+
+            <section>
+                <h2 class="section-title">Work Experience</h2>
+
+                <article class="job-entry">
+                    <div class="job-header">
+                        <h3 class="job-title">Ongandu Limited, Founder &amp; Developer</h3>
+                        <p class="date-range">04/2020 — Present</p>
+                    </div>
+                    <p class="content-text job-summary">Software development consultancy delivering full-stack web and mobile applications for a diverse portfolio of clients.</p>
+                    <ul class="content-text job-details">
+                        <li>Lead developer on <a href="https://contactzilla.app">Contactzilla.app</a> from inception — a contact management system that propagates large datasets to iOS, Android and other devices, featuring complex import/export systems and multi-platform sync integrations.</li>
+                        <li>Built queued jobs with batched data processing for handling large datasets efficiently.</li>
+                        <li>Developed iOS and Android applications with React Native, managing releases on both platforms.</li>
+                        <li>Set up and deployed cloud servers via VPNs, maintained Ubuntu-based Linux servers, and used Docker across multiple projects.</li>
+                        <li>Built CLIs for project-specific automation and task management.</li>
+                        <li>Collaborated with graphic and UX designers to deliver high-quality user interfaces.</li>
+                        <li>Clients include Tapx (Web3, sunset), Rascal Agency UK, Venice in Peril, CWM Environmental, <a href="https://nohma.com">Nohma.com</a> (formerly Climbingvan), <a href="https://boardshape.com">Boardshape.com</a>, <a href="https://globalcareerstribe.com">Global Careers Tribe</a> and others.</li>
+                    </ul>
+                    <p class="content-text job-tech"><strong>Technologies:</strong> PHP, Ruby, JavaScript, TypeScript, React, Laravel, Ruby on Rails, Next.js, WordPress, PostgreSQL, MySQL, GraphQL, Docker.</p>
+                </article>
+
+                <article class="job-entry">
+                    <div class="job-header">
+                        <h3 class="job-title">CookiesHQ, Developer</h3>
+                        <p class="date-range">12/2019 — 04/2020</p>
+                    </div>
+                    <p class="content-text" style="margin-top:8px">Developed Stornaway, an interactive video editing and streaming application for producing interactive stories. Built a custom video player in JavaScript and developed views and logic in Ruby on Rails.</p>
+                </article>
+
+                <article class="job-entry">
+                    <div class="job-header">
+                        <h3 class="job-title">Nomensa, Front End Developer</h3>
+                        <p class="date-range">07/2019 — 12/2019</p>
+                    </div>
+                    <p class="content-text" style="margin-top:8px">Maintained codebase and introduced features for The Welsh Government (<a href="https://wales.com">wales.com</a>, <a href="https://visitwales.com">visitwales.com</a>), <a href="https://roomdesignguide.withgoogle.com">Google's Room Design Guide</a> and internal toolkits. Worked alongside UX and UI design teams to deliver accessible, high-standard websites.</p>
+                </article>
+
+                <article class="job-entry">
+                    <div class="job-header">
+                        <h3 class="job-title">codeWest, Product Manager</h3>
+                        <p class="date-range">09/2018 — 07/2019</p>
+                    </div>
+                    <p class="content-text" style="margin-top:8px">Oversaw development and delivery of <a href="https://freshspringjunior.org">Freshspring Junior</a>, an educational platform focused on STEM and maritime life. Established communication between the team and client. Developed front-end and back-end using PHP and WordPress with Hozokit, a framework I authored.</p>
+                </article>
+
+                <article class="job-entry">
+                    <div class="job-header">
+                        <h3 class="job-title">Simpleweb, Developer</h3>
+                        <p class="date-range">07/2017 — 07/2018</p>
+                    </div>
+                    <p class="content-text" style="margin-top:8px">Developed SaaS mobile and web applications using SCRUM, with React Native, Node.js and PHP. Created UI designs and handled deployment of web and mobile apps. Built internal prototypes including <a href="https://simpleweb.co.uk/exploring-facial-recognition-with-webrtc">facial recognition experiments</a>.</p>
+                </article>
+
+                <article class="job-entry">
+                    <div class="job-header">
+                        <h3 class="job-title">Freelance Developer</h3>
+                        <p class="date-range">12/2014 — 04/2020</p>
+                    </div>
+                    <p class="content-text" style="margin-top:8px">Design and development for small and medium clients. Server management with Digital Ocean and continuous deployment. Web animation and Webflow integration work.</p>
+                </article>
+            </section>
+
+            <section>
+                <h2 class="section-title">Education</h2>
+                <div class="edu-entry">
+                    <h3 class="edu-heading">Digital Media — University of the West of England</h3>
+                    <p class="date-range">2015 — 2019</p>
+                    <p class="content-text edu-modules">Modules: Graphic Design, Web Design, User Experience, Multimedia Studio, 3D Technologies for the Web, Data Schemas and Applications.</p>
+                </div>
+                <div class="edu-entry">
+                    <h3 class="edu-heading">Visual Arts — Amora's Secondary School, Portugal</h3>
+                    <p class="date-range">2009 — 2012</p>
+                    <p class="content-text edu-modules">Modules: Drawing, Culture and Art History, Materials and Technologies, Foreign Language (English) EQF Level 4.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Personal Projects</h2>
+                <div class="project-entry">
+                    <h4 class="project-name"><a href="https://biriba.io">BiribA.io</a></h4>
+                    <p class="content-text project-desc">Designed and developed from scratch. A capoeira song archive with fact-checked information sourced from Mestres and teachers, with over 30,000 unique visitors. Includes English translations of Portuguese lyrics.</p>
+                </div>
+                <div class="project-entry">
+                    <h4 class="project-name">Systems Programming</h4>
+                    <p class="content-text project-desc">Exploration of C, Zig and Rust. Built Envo, a .env parser from scratch, and Gazetteer, a country codes library. Focused on writing fast, reliable low-level software.</p>
+                </div>
+                <div class="project-entry">
+                    <h4 class="project-name"><a href="https://thebasecamp.gg">The Base Camp (thebasecamp.gg)</a></h4>
+                    <p class="content-text project-desc">Vintage Story gaming community grown to 150+ members. Developed Bash scripts for server management and custom C# mods. Running two servers with community donations.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Other interests</h2>
+                <ul class="content-text interests-list">
+                    <li>Capoeira Angola</li>
+                    <li>Systems Programming</li>
+                    <li>Travelling</li>
+                    <li>Playing guitar</li>
+                </ul>
+            </section>
+
+            <div class="cv-footer">
+                <p>References given upon request.</p>
+            </div>
+        </div>
+
+        <!-- Right Column: Resources -->
+        <div class="col-right">
+            <section>
+                <h3 class="section-title no-top">Resources</h3>
+                <ul class="resources-list">
+                    <li><span class="label">Website:</span> <a href="https://csalmeida.com">csalmeida.com</a></li>
+                    <li><span class="label">Work case studies:</span> <a href="https://csalmeida.com/work">csalmeida.com/work</a></li>
+                    <li><span class="label">GitHub:</span> <a href="https://github.com/csalmeida">github.com/csalmeida</a></li>
+                    <li><span class="label">LinkedIn:</span> <a href="https://linkedin.com/in/csalmeida">linkedin.com/in/csalmeida</a></li>
+                </ul>
+            </section>
+
+            <div class="resources-group">
+                <h3 class="resources-label">Key Projects</h3>
+                <ul class="resources-list">
+                    <li><a href="https://contactzilla.app">Contactzilla</a></li>
+                    <li><a href="https://biriba.io">Biriba.io</a></li>
+                    <li><a href="https://globalcareerstribe.com">Global Careers Tribe</a></li>
+                    <li><a href="https://wales.com">Wales.com</a></li>
+                    <li><a href="https://stornaway.io">Stornaway.io</a></li>
+                    <li><a href="https://roomdesignguide.withgoogle.com">Google Room Design Guide</a></li>
+                    <li><a href="https://thebasecamp.gg">The Base Camp</a></li>
+                </ul>
+            </div>
+
+            <div class="resources-group">
+                <h3 class="resources-label">Code Examples</h3>
+                <ul class="resources-list">
+                    <li><a href="https://github.com/csalmeida/envo">github.com/csalmeida/envo</a></li>
+                    <li><a href="https://github.com/csalmeida/hozokit">github.com/csalmeida/hozokit</a></li>
+                    <li><a href="https://github.com/csalmeida/c-labs"
