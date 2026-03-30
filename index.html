@@ -34,6 +34,24 @@
 
     @media print {
         body { background: white; }
+        .main-grid {
+            page-break-before: always;
+        }
+        .job-entry, .edu-entry, .project-entry {
+            page-break-inside: avoid;
+        }
+        .section-title {
+            page-break-after: avoid;
+        }
+        .resources-group {
+            page-break-inside: avoid;
+        }
+        .education-section {
+            page-break-before: always;
+        }
+        .interests-section {
+            page-break-before: always;
+        }
     }
 
     /* Layout */
@@ -397,7 +415,7 @@
                 </article>
             </section>
 
-            <section>
+            <section class="education-section">
                 <h2 class="section-title">Education</h2>
                 <div class="edu-entry">
                     <h3 class="edu-heading">BSc(Hons) Digital Media, First Class — University of the West of England</h3>
@@ -427,7 +445,7 @@
                 </div>
             </section>
 
-            <section>
+            <section class="interests-section">
                 <h2 class="section-title">Other interests</h2>
                 <ul class="content-text interests-list">
                     <li>Capoeira Angola — long-time practitioner; built <a href="https://biriba.io">Biriba.io</a> to help students learn traditional songs and to support my own research into the art form.</li>
