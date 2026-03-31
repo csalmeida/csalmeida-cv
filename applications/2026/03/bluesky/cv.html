@@ -204,6 +204,9 @@
     .about-section {
         margin-bottom: 32px;
     }
+    .about-section .content-text + .content-text {
+        margin-top: 10px;
+    }
 
     /* Skills */
     .skills-block {
@@ -309,6 +312,9 @@
     }
     .project-entry:last-child {
         margin-bottom: 0;
+    }
+    .project-entry .project-desc + .project-desc {
+        margin-top: 10px;
     }
     .project-name {
         font-weight: 700;
@@ -438,7 +444,13 @@
     <section class="about-section">
         <h2 class="section-title no-top">About Me</h2>
         <p class="content-text">
-            Full-stack developer with over 10 years in the industry. I build and maintain web and mobile applications end-to-end — from cloud infrastructure and database design to interfaces. I'm driven by building solid, lasting solutions and invest my own time deepening my understanding of systems programming and low-level software. I use social media to share my projects and to follow interesting discussions and insights, which has given me a grounded understanding of how online communities form, grow, and need to be looked after — something I've put into practice building <a href="https://biriba.io">Biriba.io</a> (30,000+ visitors) and running <a href="https://thebasecamp.gg">The Base Camp</a> (150+ members), where I handle community guidelines and moderation first-hand. I care about building tools that help keep online spaces safe and I'm drawn to Bluesky's mission of making social media more open and user-first. I value clear communication, active listening within teams, and writing software that works reliably at scale.
+            Full-stack developer with over 10 years in the industry. I build and maintain web and mobile applications end-to-end — from cloud infrastructure and database design to interfaces. I'm driven by building solid, lasting solutions and invest my own time deepening my understanding of systems programming and low-level software.
+        </p>
+        <p class="content-text">
+            I use social media to share my projects and to follow interesting discussions and insights, which has given me a grounded understanding of how online communities form, grow, and need to be looked after — something I've put into practice building <a href="https://biriba.io">Biriba.io</a> (30,000+ visitors) and running <a href="https://thebasecamp.gg">The Base Camp</a> (150+ members), where I handle community guidelines and moderation first-hand.
+        </p>
+        <p class="content-text">
+            I care about building tools that help keep online spaces safe and I'm drawn to Bluesky's mission of making social media more open and user-first. I value clear communication, active listening within teams, and writing software that works reliably at scale.
         </p>
     </section>
 
@@ -558,7 +570,8 @@
                 </div>
                 <div class="project-entry">
                     <h4 class="project-name"><a href="https://thebasecamp.gg">The Base Camp (thebasecamp.gg)</a></h4>
-                    <p class="content-text project-desc">Built and grew an online gaming community from scratch to 150+ members. Founded and manage the Discord community, establishing community guidelines and moderation policies. Recruited and onboarded two additional moderators to help enforce standards and maintain a welcoming, safe environment. Experience running a social space gives first-hand insight into the challenges of content moderation at scale. Developed Bash scripts for server management and custom C# mods. Running two servers funded by community donations.</p>
+                    <p class="content-text project-desc">Built and grew an online gaming community from scratch to 150+ members. Founded and manage the Discord community, establishing community guidelines and moderation policies. Recruited and onboarded two additional moderators to help enforce standards and maintain a welcoming, safe environment.</p>
+                    <p class="content-text project-desc">Experience running a social space gives first-hand insight into the challenges of content moderation at scale. Developed Bash scripts for server management and custom C# mods. Running two servers funded by community donations.</p>
                 </div>
             </section>
 
