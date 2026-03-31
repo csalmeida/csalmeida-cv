@@ -38,6 +38,18 @@
 
     @media print {
         body { background: white; }
+        .journey-banner {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .journey-arrow-line .line {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .journey-arrow-line .arrowhead {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
         .main-grid {
             page-break-before: always;
         }
