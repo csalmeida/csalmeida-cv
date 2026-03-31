@@ -32,6 +32,10 @@
         text-decoration: underline;
     }
 
+    .print-url {
+        display: none;
+    }
+
     @media print {
         body { background: white; }
         .main-grid {
@@ -52,7 +56,19 @@
         .interests-section {
             page-break-before: always;
         }
+        .resources-list .label {
+            display: block;
+        }
+        .print-url {
+            display: block;
+            font-weight: 400;
+            font-size: 0.65rem;
+            color: #888;
+            word-break: break-all;
+        }
     }
+
+
 
     /* Layout */
     .cv-container {
@@ -330,7 +346,7 @@
         <section>
             <h2 class="section-title">Technical Skills</h2>
             <div class="content-text skills-list">
-                <p><strong>Languages:</strong> PHP, Ruby, JavaScript, TypeScript, C#, SQL. Exploring Zig, Rust and C.</p>
+                <p><strong>Languages:</strong> PHP, Ruby, JavaScript, TypeScript, SQL. Exploring Zig, Rust and C.</p>
                 <p><strong>Frameworks:</strong> Laravel, Ruby on Rails, React, React Native, Next.js, WordPress.</p>
                 <p><strong>Data:</strong> PostgreSQL, MySQL, GraphQL.</p>
                 <p><strong>Infrastructure:</strong> Docker, Linux (Ubuntu), cloud servers, CI/CD.</p>
@@ -475,13 +491,13 @@
             <div class="resources-group">
                 <h3 class="resources-label">Key Projects</h3>
                 <ul class="resources-list">
-                    <li><a href="https://contactzilla.app">Contactzilla</a></li>
-                    <li><a href="https://biriba.io">Biriba.io</a></li>
-                    <li><a href="https://globalcareerstribe.com">Global Careers Tribe</a></li>
-                    <li><a href="https://wales.com">Wales.com</a></li>
-                    <li><a href="https://stornaway.io">Stornaway.io</a></li>
-                    <li><a href="https://roomdesignguide.withgoogle.com">Google Room Design Guide</a></li>
-                    <li><a href="https://thebasecamp.gg">The Base Camp</a></li>
+                    <li><a href="https://contactzilla.app">Contactzilla</a> <span class="print-url">https://contactzilla.app</span></li>
+                    <li><a href="https://biriba.io">Biriba.io</a> <span class="print-url">https://biriba.io</span></li>
+                    <li><a href="https://globalcareerstribe.com">Global Careers Tribe</a> <span class="print-url">https://globalcareerstribe.com</span></li>
+                    <li><a href="https://wales.com">Wales.com</a> <span class="print-url">https://wales.com</span></li>
+                    <li><a href="https://stornaway.io">Stornaway.io</a> <span class="print-url">https://stornaway.io</span></li>
+                    <li><a href="https://roomdesignguide.withgoogle.com">Google Room Design Guide</a> <span class="print-url">https://roomdesignguide.withgoogle.com</span></li>
+                    <li><a href="https://thebasecamp.gg">The Base Camp</a> <span class="print-url">https://thebasecamp.gg</span></li>
                 </ul>
             </div>
 
@@ -490,18 +506,22 @@
                 <ul class="resources-list">
                     <li>
                         <a href="https://github.com/csalmeida/envo">csalmeida/envo</a>
+                        <span class="print-url">https://github.com/csalmeida/envo</span>
                         <span class="repo-desc">.env file parser written in Zig</span>
                     </li>
                     <li>
                         <a href="https://github.com/csalmeida/hozokit">csalmeida/hozokit</a>
+                        <span class="print-url">https://github.com/csalmeida/hozokit</span>
                         <span class="repo-desc">WordPress component framework (PHP)</span>
                     </li>
                     <li>
                         <a href="https://github.com/csalmeida/c-labs">csalmeida/c-labs</a>
+                        <span class="print-url">https://github.com/csalmeida/c-labs</span>
                         <span class="repo-desc">Exercises and experiments in C</span>
                     </li>
                     <li>
                         <a href="https://github.com/csalmeida/protonmail-themes">csalmeida/protonmail-themes</a>
+                        <span class="print-url">https://github.com/csalmeida/protonmail-themes</span>
                         <span class="repo-desc">Custom CSS themes for ProtonMail</span>
                     </li>
                 </ul>
