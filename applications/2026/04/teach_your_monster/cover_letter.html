@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cristiano Almeida | Cover Letter — Teach Your Monster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700;1,800&family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #fff;
+        color: #1a1a1a;
+        font-family: 'Karla', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        -webkit-print-color-adjust: exact;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    @media print {
+        body { background: white; }
+        .journey-banner {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .journey-arrow-line .line {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .journey-arrow-line .arrowhead {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    }
+
+    /* Layout */
+    .cv-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+
+    /* Header */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 48px;
+    }
+
+    .name-brand {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
+
+    .contact-info {
+        text-align: right;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.8rem;
+        font-weight: 700;
+        line-height: 1.8;
+        letter-spacing: -0.02em;
+    }
+
+    /* Journey Banner */
+    .journey-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        background: #f5f5f5;
+        border-radius: 12px;
+        padding: 28px 40px;
+        margin: 28px 0;
+    }
+    .journey-endpoint {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-shrink: 0;
+    }
+    .journey-logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    .journey-label {
+        font-family: 'Roboto Mono', monospace;
+        text-transform: uppercase;
+        font-size: 0.55rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #999;
+        line-height: 1;
+    }
+    .journey-name {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: #333;
+        line-height: 1;
+        margin-top: 5px;
+    }
+    .journey-arrow {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 24px;
+        gap: 6px;
+    }
+    .journey-status {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.55rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #999;
+    }
+    .journey-arrow-line {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .journey-arrow-line .line {
+        flex: 1;
+        height: 2px;
+        background: #ccc;
+    }
+    .journey-arrow-line .arrowhead {
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 10px solid #ccc;
+        flex-shrink: 0;
+    }
+
+    /* Sections */
+    .section-title {
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        color: #777;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        margin-top: 2.5rem;
+    }
+    .section-title.no-top {
+        margin-top: 0;
+    }
+
+    .content-text {
+        font-size: 0.875rem;
+        line-height: 1.55;
+        color: #333;
+        font-weight: 400;
+    }
+
+    /* Cover Letter */
+    .letter-section {
+        margin-bottom: 32px;
+    }
+
+    .role-subtitle {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.8rem;
+        color: #888;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    .letter-body .content-text + .content-text {
+        margin-top: 14px;
+    }
+
+    .letter-sign-off {
+        margin-top: 28px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #555;
+        line-height: 1.8;
+    }
+
+    .letter-sign-off a {
+        color: inherit;
+    }
+
+    .letter-sign-off .sign-off-name {
+        margin-top: 12px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+        .cv-container {
+            padding: 32px 20px;
+        }
+        .header {
+            flex-direction: column;
+            gap: 16px;
+        }
+        .contact-info {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="cv-container">
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1 class="name-brand">_cristiano<br>almeida</h1>
+        </div>
+        <div class="contact-info">
+            <p><a href="mailto:cristiano@ongandu.com">cristiano@ongandu.com</a></p>
+            <p><a href="tel:+447707249357">+44 7707 249 357</a></p>
+            <p><a href="https://csalmeida.com">csalmeida.com</a></p>
+        </div>
+    </header>
+
+    <!-- Journey Banner -->
+    <div class="journey-banner">
+        <div class="journey-endpoint">
+            <img src="images/ongandu_logo.png" alt="Ongandu Limited" class="journey-logo">
+            <div>
+                <div class="journey-label">From</div>
+                <div class="journey-name">Ongandu</div>
+            </div>
+        </div>
+        <div class="journey-arrow">
+            <div class="journey-status">Applying</div>
+            <div class="journey-arrow-line">
+                <div class="line"></div>
+                <div class="arrowhead"></div>
+            </div>
+        </div>
+        <div class="journey-endpoint">
+            <img src="images/teach_your_monster_logo.jpg" alt="Teach Your Monster" class="journey-logo">
+            <div>
+                <div class="journey-label">To</div>
+                <div class="journey-name">Teach Your Monster</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cover Letter -->
+    <section class="letter-section">
+        <h2 class="section-title no-top">Cover Letter</h2>
+        <p class="role-subtitle">Senior Ruby on Rails Developer (Part-Time Contractor)</p>
+
+        <div class="letter-body">
+            <p class="content-text">Hi,</p>
+
+            <p class="content-text">I'm Cristiano, a full-stack developer with 10 years of experience building and maintaining web applications, including several built with Ruby on Rails. I'm applying for the Senior Ruby on Rails Developer contractor role at Teach Your Monster.</p>
+
+            <p class="content-text">Despite working multiple technologies I've built, contributed to and maintained a few Rails applications. <a href="https://biriba.io">Biriba.io</a> is a capoeira song archive I built with Rails — it includes user accounts, authentication, content submission workflows, and has had over 30,000 visitors. I also built Global Careers Tribe, a Rails platform with a web interface, API endpoints and server configuration with a large dataset to facilitate finding work opportunities abroad. At CookiesHQ, I worked on Stornaway.io — an interactive video platform built on Rails — where I developed controllers, views, application logic, and contributed to the test suite, most of my work was on the video player and on the node system to connect film scenes. More recently, I've been the lead developer on Contactzilla, a large-scale contact management system built with Laravel and PostgreSQL, involving complex data processing, multi-platform sync, and user authentication. That experience maintaining a mature production system end-to-end translates directly to the kind of work this role requires.</p>
+
+            <p class="content-text">I also have some indirect EdTech experience. I oversaw the development of <a href="https://freshspringjunior.org">Freshspring Junior</a>, an educational platform for children focused on STEM and maritime life, which gave me first-hand understanding of building products for young learners. I've also worked at Nomensa, an accessibility-focused agency, where I delivered accessible websites for the Welsh Government and Google — experience that's directly relevant given the accessibility-first mindset this role calls for.</p>
+
+            <p class="content-text">I'm comfortable working as a freelance contractor, working remotely within UK hours, and collaborating autonomously. I've been running Ongandu Limited since 2020, my small software business — I'm used to managing engagements, communicating progress, and owning systems end-to-end. The part-time setup of 3–4 days per week aligns well with how I already work.</p>
+
+            <p class="content-text">I'm drawn to Teach Your Monster's mission — it's impact-focused, helping millions of children learn. The culture described — startup-like, flexible, remote-friendly, with real autonomy — matches how I work best. I'd love to help maintain and evolve the platform.</p>
+
+            <p class="content-text">Although I travel at times, I've been based in the UK for 11 years and it where I consider my home to be. I am available to work within UK hours.</p>
+        </div>
+
+        <div class="letter-sign-off">
+            <p>CV, portfolio, and links: <a href="https://csalmeida.com">csalmeida.com</a></p>
+            <p>GitHub: <a href="https://github.com/csalmeida">github.com/csalmeida</a></p>
+            <br>
+            <p>Thanks for your time — I hope to hear from you.</p>
+            <p class="sign-off-name">Cristiano Almeida</p>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>
